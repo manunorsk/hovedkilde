@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hovedkilde — GEO-rådgivning for ledergrupper</title>
+<meta name="description" content="Hovedkilde er et rådgivningsmiljø i Oslo som arbeider med generativ motoroptimalisering (GEO) for større norske virksomheter. Vi måler og dokumenterer hvor ofte din virksomhet siteres i AI-genererte svar.">
+<link rel="canonical" href="https://hovedkilde.no/">
+<meta property="og:title" content="Hovedkilde — GEO-rådgivning for ledergrupper">
+<meta property="og:description" content="Når AI svarer — hvem blir sitert? Rådgivning innen generativ motoroptimalisering for større norske virksomheter.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hovedkilde.no/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,340;9..144,400&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Hovedkilde",
+  "url": "https://hovedkilde.no",
+  "description": "Rådgivning innen generativ motoroptimalisering (GEO) for større norske virksomheter.",
+  "areaServed": "NO",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Oslo",
+    "addressCountry": "NO"
+  },
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Philis Motorikklab",
+    "identifier": "937705794"
+  }
+}
+</script>
+<style>
+:root{
+  --bg:#FAFAF8;
+  --ink:#111110;
+  --ink-soft:#3D3C38;
+  --accent:#1B2A41;
+  --cream:#F4F2EC;
+  --cream-soft:#B9BCC4;
+  --rule:#D9D7D1;
+  --rule-soft:#E8E6E1;
+  --rule-dark:rgba(244,242,236,.18);
+  --max:640px;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Inter',-apple-system,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:17px;
+  line-height:1.7;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.serif,h1,h2,h3,.lede,.label .num{
+  font-family:var(--font-display);
+  font-feature-settings:"liga" 1,"calt" 1;
+}
+::selection{background:var(--accent);color:var(--bg)}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:10;
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:28px clamp(24px,5vw,64px);
+  background:linear-gradient(to bottom,var(--bg) 55%,transparent);
+  transition:transform .45s ease,opacity .45s ease;
+}
+header.hide{transform:translateY(-110%);opacity:0}
+.wordmark{
+  font-size:13px;font-weight:500;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--ink);
+  text-decoration:none;
+}
+.header-link{
+  font-size:13px;
+  letter-spacing:0.06em;
+  color:var(--ink-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+  transition:color .3s,border-color .3s;
+}
+.header-link:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ---------- hero ---------- */
+.hero-wrap{position:relative}
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  justify-content:center;
+  padding:0 clamp(24px,5vw,64px);
+  max-width:1080px;
+  margin:0 auto;
+}
+.hero h1{
+  font-weight:300;
+  font-size:clamp(2.6rem,7vw,6rem);
+  line-height:1.08;
+  letter-spacing:-0.012em;
+  max-width:14ch;
+}
+.h-line{
+  display:block;
+  overflow:hidden;
+}
+.h-line > span{
+  display:block;
+  opacity:0;
+  transform:translateY(0.45em);
+  transition:opacity .9s ease-out,transform .9s ease-out;
+}
+body.loaded .h-line:nth-child(1) > span{opacity:1;transform:none;transition-delay:.15s}
+body.loaded .h-line:nth-child(2) > span{opacity:1;transform:none;transition-delay:.45s}
+.cited{
+  position:relative;
+  white-space:nowrap;
+}
+.cited::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0.04em;
+  height:2px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .8s cubic-bezier(.65,0,.3,1);
+}
+body.loaded .cited::after{transform:scaleX(1);transition-delay:1.25s}
+.hero h1 sup{
+  font-size:0.3em;
+  font-weight:400;
+  color:var(--accent);
+  vertical-align:super;
+  margin-left:0.18em;
+}
+.hero-link{
+  display:inline-block;
+  margin-top:56px;
+  font-size:15px;
+  letter-spacing:0.04em;
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--ink);
+  padding-bottom:3px;
+  transition:color .3s,border-color .3s,opacity .9s ease-out,transform .9s ease-out;
+  align-self:flex-start;
+  opacity:0;
+  transform:translateY(10px);
+}
+body.loaded .hero-link{opacity:1;transform:none;transition-delay:.85s}
+.hero-link:hover{color:var(--accent);border-color:var(--accent)}
+.hero-foot{
+  position:absolute;
+  bottom:40px;left:0;right:0;
+  text-align:center;
+  font-size:12px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  opacity:0;
+  transition:opacity 1.2s ease;
+}
+body.loaded .hero-foot{opacity:.5;transition-delay:1.6s}
+
+/* ---------- sections ---------- */
+main{display:block}
+section{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:clamp(96px,14vh,170px) 24px 0;
+}
+.label{
+  display:flex;align-items:baseline;gap:16px;
+  margin-bottom:44px;
+}
+.label .num{
+  font-weight:400;
+  font-size:15px;
+  color:var(--accent);
+  min-width:2.2em;
+}
+.label .name{
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+}
+.label::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:linear-gradient(to right,var(--rule-soft),transparent);
+  align-self:center;
+}
+section p{margin-bottom:1.5em}
+section p:last-child{margin-bottom:0}
+section p sup{
+  font-size:0.7em;
+  color:var(--accent);
+  font-weight:450;
+}
+.lede{
+  font-weight:340;
+  font-size:clamp(1.45rem,3vw,1.8rem);
+  line-height:1.45;
+  letter-spacing:-0.005em;
+  margin-bottom:1.4em;
+}
+
+/* ---------- méthode ---------- */
+.method{list-style:none}
+.method li{
+  padding:36px 0;
+  border-top:1px solid var(--rule-soft);
+}
+.method li:last-child{border-bottom:1px solid var(--rule-soft)}
+.method h3{
+  font-weight:400;
+  font-size:1.35rem;
+  margin-bottom:10px;
+  letter-spacing:-0.005em;
+}
+.method p{
+  color:var(--ink-soft);
+  font-size:16px;
+  margin:0;
+}
+
+/* ---------- critères ---------- */
+.criteria{list-style:none}
+.criteria li{
+  position:relative;
+  padding:18px 0 18px 34px;
+  border-top:1px solid var(--rule-soft);
+}
+.criteria li:last-child{border-bottom:1px solid var(--rule-soft)}
+.criteria li::before{
+  content:"—";
+  position:absolute;left:0;
+  color:var(--accent);
+}
+.engagement-note{
+  margin-top:36px;
+  font-size:14px;
+  color:var(--ink-soft);
+  letter-spacing:0.02em;
+}
+#samarbeid{padding-bottom:clamp(96px,14vh,170px)}
+
+/* ---------- clôture bleu nuit : kontakt + footer ---------- */
+.band{
+  background:var(--accent);
+  color:var(--cream);
+}
+.band section{padding-bottom:0}
+.band .label .num{color:var(--cream)}
+.band .label .name{color:var(--cream-soft)}
+.band .label::after{background:linear-gradient(to right,var(--rule-dark),transparent)}
+.contact-intro{margin-bottom:48px;color:var(--cream)}
+.field{margin-bottom:32px}
+.field label{
+  display:block;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--cream-soft);
+  margin-bottom:10px;
+}
+.field input{
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid var(--rule-dark);
+  padding:8px 0 12px;
+  font-family:var(--font-body);
+  font-size:17px;
+  color:var(--cream);
+  border-radius:0;
+  transition:border-color .3s;
+}
+.field input:focus{
+  outline:none;
+  border-bottom-color:var(--cream);
+}
+.submit{
+  margin-top:16px;
+  background:transparent;
+  border:1px solid var(--cream);
+  color:var(--cream);
+  font-family:var(--font-body);
+  font-size:14px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:16px 40px;
+  cursor:pointer;
+  transition:background .35s,color .35s;
+}
+.submit:hover{
+  background:var(--cream);
+  color:var(--accent);
+}
+.submit:focus-visible{outline:2px solid var(--cream);outline-offset:3px}
+.contact-alt{
+  margin-top:40px;
+  font-size:14px;
+  color:var(--cream-soft);
+}
+.contact-alt a{
+  color:var(--cream);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule-dark);
+  transition:border-color .3s;
+}
+.contact-alt a:hover{border-color:var(--cream)}
+
+.footnote{
+  margin-top:72px;
+  padding-top:24px;
+  border-top:1px solid var(--rule-dark);
+  font-size:13.5px;
+  line-height:1.65;
+  color:var(--cream-soft);
+  font-feature-settings:"onum" 1;
+}
+.footnote sup{color:var(--cream);margin-right:6px}
+
+/* ---------- footer ---------- */
+footer{
+  padding:72px 24px 64px;
+}
+.footer-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  font-size:13px;
+  color:var(--cream-soft);
+}
+.footer-inner a{
+  color:var(--cream-soft);
+  text-decoration:none;
+  border-bottom:1px solid var(--rule-dark);
+  transition:color .3s,border-color .3s;
+}
+.footer-inner a:hover{color:var(--cream);border-color:var(--cream)}
+.footer-mark{
+  font-size:12px;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--cream);
+  margin-bottom:8px;
+}
+
+/* ---------- reveal ---------- */
+.reveal{
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .9s ease-out,transform .9s ease-out;
+}
+.reveal.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal,.h-line > span,.hero-link,.hero-foot{opacity:1!important;transform:none!important;transition:none!important}
+  .cited::after{transform:scaleX(1)!important;transition:none!important}
+  header{transition:none}
+}
+
+@media(max-width:560px){
+  .hero h1{font-size:clamp(2.2rem,11vw,2.9rem)}
+  .hero-foot{display:none}
+  section{padding-top:88px}
+}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <a class="wordmark" href="#">Hovedkilde</a>
+  <a class="header-link" href="#kontakt">Be om en samtale</a>
+</header>
+
+<div class="hero-wrap">
+  <div class="hero">
+    <h1>
+      <span class="h-line"><span>Når AI svarer&nbsp;—</span></span>
+      <span class="h-line"><span>hvem blir <span class="cited">sitert<sup>1</sup></span>?</span></span>
+    </h1>
+    <a class="hero-link" href="#kontakt">Be om en innledende samtale</a>
+  </div>
+  <div class="hero-foot">Oslo &nbsp;·&nbsp; MMXXVI</div>
+</div>
+
+<main>
+
+  <section id="skiftet">
+    <div class="label reveal"><span class="num">I.</span><span class="name">Skiftet</span></div>
+    <p class="lede reveal">Stadig flere beslutninger begynner ikke lenger med et søk, men med et spørsmål.</p>
+    <p class="reveal">ChatGPT, Gemini, Perplexity og Claude besvarer spørsmålene direkte — og velger selv hvilke kilder svarene bygger på. Den som ikke er blant kildene, er heller ikke en del av svaret.</p>
+    <p class="reveal">For virksomheter betyr det at synlighet ikke lenger måles i posisjoner på en resultatside, men i hvor ofte man siteres, og i hvilke sammenhenger.<sup>2</sup></p>
+    <p class="reveal">Hovedkilde arbeider med én ting: å gjøre din virksomhet til kilden disse systemene bygger sine svar på.</p>
+  </section>
+
+  <section id="metode">
+    <div class="label reveal"><span class="num">II.</span><span class="name">Metode</span></div>
+    <ul class="method">
+      <li class="reveal">
+        <h3>Kartlegging</h3>
+        <p>Vi måler hvor ofte virksomheten siteres i svar på sektorens beslutningsspørsmål — på tvers av fire svarmotorer, med dokumentert og etterprøvbar metode.</p>
+      </li>
+      <li class="reveal">
+        <h3>Posisjonering</h3>
+        <p>Vi strukturerer kildegrunnlaget: referanseinnhold, teknisk merking og dokumentasjon som svarmotorene kan lese, forstå og gjengi.</p>
+      </li>
+      <li class="reveal">
+        <h3>Dokumentasjon</h3>
+        <p>Vi måler på nytt hvert kvartal og rapporterer på ledelsesnivå — frekvens, sammenhenger og utvikling over tid.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="samarbeid">
+    <div class="label reveal"><span class="num">III.</span><span class="name">Hvem vi arbeider med</span></div>
+    <ul class="criteria">
+      <li class="reveal">Ledergrupper som ser AI-synlighet som et strategisk spørsmål, ikke et markedsføringstiltak.</li>
+      <li class="reveal">Virksomheter der posisjonen som fagkilde er en del av forretningsstrategien.</li>
+      <li class="reveal">Engasjementer med en horisont på minimum tolv måneder.</li>
+    </ul>
+    <p class="engagement-note reveal">Engasjementer fra 50&nbsp;000 NOK.</p>
+  </section>
+
+  <div class="band">
+    <section id="kontakt">
+      <div class="label reveal"><span class="num">IV.</span><span class="name">Kontakt</span></div>
+      <p class="contact-intro reveal">Be om en innledende samtale. Vi svarer innen to virkedager.</p>
+      <div class="reveal">
+        <div class="field">
+          <label for="navn">Navn</label>
+          <input type="text" id="navn" name="navn" autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="selskap">Selskap</label>
+          <input type="text" id="selskap" name="selskap" autocomplete="organization">
+        </div>
+        <div class="field">
+          <label for="epost">E-post</label>
+          <input type="email" id="epost" name="epost" autocomplete="email">
+        </div>
+        <button class="submit" id="send">Send forespørsel</button>
+        <p class="contact-alt">Eller skriv direkte til <a href="mailto:emmanuel@sitera.no">emmanuel@sitera.no</a>.</p>
+      </div>
+
+      <div class="footnote reveal">
+        <p><sup>1</sup>Svarmotorer oppgir i økende grad sine kilder eksplisitt. Hvilke kilder som velges — og hvor ofte — kan måles og dokumenteres.</p>
+        <p style="margin-top:10px"><sup>2</sup>Vi dokumenterer synlighet som frekvens over et definert sett spørsmål. Vi lover den aldri.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-mark">Hovedkilde</div>
+        <div>En del av Philis Motorikklab · Org.nr 937 705 794 · Oslo</div>
+        <div>Se også: <a href="https://sitera.no">Sitera</a></div>
+      </div>
+    </footer>
+  </div>
+
+</main>
+
+<script>
+(function(){
+  // Séquence d'entrée hero
+  window.addEventListener('load', function(){
+    requestAnimationFrame(function(){ document.body.classList.add('loaded'); });
+  });
+  // Fallback si load tarde
+  setTimeout(function(){ document.body.classList.add('loaded'); }, 1200);
+
+  // Reveal on scroll
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // Header : disparaît en descendant, revient en montant
+  var hd = document.getElementById('hd');
+  var lastY = window.scrollY;
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){
+      var y = window.scrollY;
+      if (y > 120 && y > lastY) { hd.classList.add('hide'); }
+      else { hd.classList.remove('hide'); }
+      lastY = y;
+      ticking = false;
+    });
+  }, { passive: true });
+
+  // Contact : mailto fallback
+  document.getElementById('send').addEventListener('click', function(){
+    var navn = document.getElementById('navn').value.trim();
+    var selskap = document.getElementById('selskap').value.trim();
+    var epost = document.getElementById('epost').value.trim();
+    var subject = encodeURIComponent('Forespørsel om innledende samtale');
+    var body = encodeURIComponent(
+      'Navn: ' + navn + '\nSelskap: ' + selskap + '\nE-post: ' + epost + '\n\n'
+    );
+    window.location.href = 'mailto:emmanuel@sitera.no?subject=' + subject + '&body=' + body;
+  });
+})();
+</script>
+
+</body>
+</html>
