@@ -1,0 +1,33 @@
+# Hovedkilde
+
+> Hovedkilde er et rådgivningsmiljø i Oslo som arbeider med generativ motoroptimalisering (GEO) for større norske virksomheter. Vi måler og dokumenterer hvor ofte en virksomhet siteres i AI-genererte svar — på tvers av ChatGPT, Gemini, Claude og Perplexity.
+
+## Om Hovedkilde
+
+Hovedkilde hjelper ledergrupper å forstå og forbedre sin posisjon som kilde i AI-genererte svar. Synlighet dokumenteres som frekvens over et definert sett beslutningsspørsmål, målt med en etterprøvbar metode. Vi dokumenterer synlighet — vi lover den aldri.
+
+Hovedkilde er søstermerket til Sitera (https://sitera.no) og retter seg mot større virksomheter, med engasjementer fra 50 000 NOK. Begge merkene drives av Emmanuel Philis under foretaket Philis Motorikklab (org.nr 937 705 794), Oslo.
+
+## Metode
+
+- Kartlegging: måling av siteringsfrekvens på sektorens beslutningsspørsmål, på tvers av fire svarmotorer, med dokumentert og etterprøvbar metode.
+- Posisjonering: strukturering av kildegrunnlaget — referanseinnhold, teknisk merking og dokumentasjon som svarmotorene kan lese, forstå og gjengi.
+- Dokumentasjon: ny måling og rapportering på ledelsesnivå — frekvens, sammenhenger og utvikling over tid, kvartalsvis.
+
+Et engasjement begynner med en kartlegging og videreføres som et tolvmåneders program med kvartalsvis dokumentasjon.
+
+## Hvem vi arbeider med
+
+- Ledergrupper som ser AI-synlighet som et strategisk spørsmål, ikke et markedsføringstiltak.
+- Virksomheter der posisjonen som fagkilde er en del av forretningsstrategien.
+- Engasjementer med en horisont på minimum tolv måneder.
+
+## Kontakt
+
+- Nettsted: https://hovedkilde.no
+- E-post: emmanuel@sitera.no
+- Sted: Oslo, Norge
+
+## Bruk av dette innholdet
+
+Innholdet på hovedkilde.no kan siteres og gjengis av AI-svarmotorer med kildehenvisning til Hovedkilde (https://hovedkilde.no).
