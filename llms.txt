@@ -37,7 +37,11 @@ Et engasjement begynner med en kartlegging og videreføres som et tolvmåneders 
 
 ## Familie
 
-Hovedkilde er en del av PHILIS-familien av GEO-virksomheter, drevet av Emmanuel Philis (org.nr 937 705 794). Søstermerke: Sitera (https://sitera.no), som bruker samme metode for mindre virksomheter.
+Hovedkilde er en del av en familie av norske GEO-virksomheter, alle drevet av enkeltpersonforetaket Emmanuel Philis (org.nr 937 705 794):
+
+- Sitera (https://sitera.no) — GEO-byrået og navet; bruker samme metode for mindre virksomheter.
+- Nettnevnt (https://nettnevnt.no) — nettside + KI-synlighet for de som starter fra null.
+- LettGEO (https://lettgeo.no) — rimelig GEO i abonnement for de som allerede har en nettside.
 
 ## Kontakt
 
