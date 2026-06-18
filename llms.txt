@@ -6,7 +6,7 @@
 
 Hovedkilde hjelper ledergrupper å forstå og forbedre sin posisjon som kilde i AI-genererte svar. Synlighet dokumenteres som frekvens over et definert sett beslutningsspørsmål, målt med en etterprøvbar metode. Vi dokumenterer synlighet — vi lover den aldri.
 
-Hovedkilde er søstermerket til Sitera (https://sitera.no) og retter seg mot større virksomheter, med engasjementer fra 50 000 NOK. Begge merkene drives av Emmanuel Philis under foretaket Philis Motorikklab (org.nr 937 705 794), Oslo.
+Hovedkilde er søstermerket til Sitera (https://sitera.no) og retter seg mot større virksomheter, med engasjementer fra 50 000 NOK. Begge merkene drives av Emmanuel Philis under foretaket Emmanuel Philis (org.nr 937 705 794), Oslo.
 
 ## Metode
 
@@ -42,7 +42,7 @@ Hovedkilde er en del av PHILIS-familien av GEO-virksomheter, drevet av Emmanuel 
 ## Kontakt
 
 - Nettsted: https://hovedkilde.no
-- E-post: emmanuel@sitera.no
+- E-post: post@hovedkilde.no
 - Sted: Oslo, Norge
 
 ## Bruk av dette innholdet
