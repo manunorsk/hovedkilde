@@ -33,6 +33,7 @@ Et engasjement begynner med en kartlegging og videreføres som et tolvmåneders 
 ## Sider
 
 - [Forside](https://hovedkilde.no/): posisjonering, metode, hvem vi arbeider med, kontakt.
+- [English version](https://hovedkilde.no/en/): engelsk speiling av forsiden.
 - [Personvernerklæring](https://hovedkilde.no/personvern.html): behandling av personopplysninger (GDPR).
 
 ## Familie
