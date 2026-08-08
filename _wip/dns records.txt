@@ -1,0 +1,17 @@
+@ 86400 IN SOA ns1.gandi.net. hostmaster.gandi.net. 1781809035 10800 3600 604800 10800
+@ 10800 IN A 216.198.79.1
+@ 10800 IN MX 10 spool.mail.gandi.net.
+@ 10800 IN MX 50 fb.mail.gandi.net.
+@ 10800 IN TXT "google-site-verification=MdG1kFbDpM4VEB-HBuQDOa1l00ARcMUTN0Mu7H9SFBk"
+@ 10800 IN TXT "v=spf1 include:_mailcust.gandi.net ?all"
+_imap._tcp 10800 IN SRV 0 0 0   .
+_imaps._tcp 10800 IN SRV 0 1 993 mail.gandi.net.
+_pop3._tcp 10800 IN SRV 0 0 0   .
+_pop3s._tcp 10800 IN SRV 10 1 995 mail.gandi.net.
+_submission._tcp 10800 IN SRV 0 1 465 mail.gandi.net.
+gm1._domainkey 10800 IN CNAME gm1.gandimail.net.
+gm2._domainkey 10800 IN CNAME gm2.gandimail.net.
+gm3._domainkey 10800 IN CNAME gm3.gandimail.net.
+mailsa 10800 IN TXT "9b3c2ae5c24983394e47dc708eea3e56ae814d0a302731fbc39ef29cf7be5d7d"
+webmail 10800 IN CNAME webmail.gandi.net.
+www 10800 IN CNAME 276cc187a46e1d19.vercel-dns-017.com.
