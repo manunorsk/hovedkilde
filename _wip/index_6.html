@@ -6,9 +6,6 @@
 <title>Hovedkilde — GEO-rådgivning for ledergrupper</title>
 <meta name="description" content="Hovedkilde er et rådgivningsmiljø i Oslo som arbeider med generativ motoroptimalisering (GEO) for større norske virksomheter. Vi måler og dokumenterer hvor ofte din virksomhet siteres i AI-genererte svar.">
 <link rel="canonical" href="https://hovedkilde.no/">
-<link rel="alternate" hreflang="nb-NO" href="https://hovedkilde.no/">
-<link rel="alternate" hreflang="en" href="https://hovedkilde.no/en/">
-<link rel="alternate" hreflang="x-default" href="https://hovedkilde.no/">
 <meta property="og:title" content="Hovedkilde — GEO-rådgivning for ledergrupper">
 <meta property="og:description" content="Når AI svarer — hvem blir sitert? Rådgivning innen generativ motoroptimalisering for større norske virksomheter.">
 <meta property="og:type" content="website">
@@ -32,11 +29,10 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "Hovedkilde",
-  "legalName": "Emmanuel Philis",
   "url": "https://hovedkilde.no",
   "description": "Rådgivning innen generativ motoroptimalisering (GEO) for større norske virksomheter.",
   "areaServed": "NO",
-  "email": "post@hovedkilde.no",
+  "email": "emmanuel@sitera.no",
   "knowsAbout": ["Generativ motoroptimalisering", "GEO", "AI-synlighet", "Siteringsfrekvens i AI-svar"],
   "founder": {
     "@type": "Person",
@@ -47,17 +43,11 @@
     "addressLocality": "Oslo",
     "addressCountry": "NO"
   },
-  "sameAs": ["https://sitera.no", "https://nettnevnt.no", "https://lettgeo.no"],
-  "isPartOf": {
-    "@type": "Organization",
-    "@id": "https://sitera.no/#organisasjon",
-    "name": "Sitera",
-    "url": "https://sitera.no"
-  },
+  "sameAs": ["https://sitera.no"],
   "parentOrganization": {
     "@type": "Organization",
-    "name": "Emmanuel Philis",
-    "identifier": "937 705 794"
+    "name": "Philis Motorikklab",
+    "identifier": "937705794"
   }
 }
 </script>
@@ -605,7 +595,7 @@ footer{padding:72px 24px 0}
   <div class="masthead">
     <a class="wordmark" href="/">Hovedkilde</a>
     <div class="masthead-right">
-      <span class="opt">Oslo · 2026</span><span class="sep opt">/</span><a href="#kontakt">Be om en samtale</a><span class="sep">/</span><a href="/en/" class="lang-switch" hreflang="en" aria-label="In English" style="display:inline-flex;align-items:center;font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.14em;border:1px solid var(--accent);border-radius:4px;padding:4px 9px;line-height:1;color:var(--accent);text-decoration:none">EN</a>
+      <span class="opt">Oslo · 2026</span><span class="sep opt">/</span><a href="#kontakt">Be om en samtale</a>
     </div>
   </div>
 </header>
@@ -672,7 +662,12 @@ footer{padding:72px 24px 0}
     <div class="label reveal"><span class="num">IV.</span><h2 class="name">Hvem står bak</h2></div>
     <p class="lede reveal">Hovedkilde drives av Emmanuel&nbsp;Philis.</p>
     <p class="reveal">Metoden er bygget og prøvd ut på egne virksomheter før den ble tilbudt andre. Tilnærmingen er den samme i hvert engasjement: synlighet i AI-svar måles og dokumenteres som frekvens — den loves aldri.</p>
-    <p class="reveal">Arbeidet utføres fra Oslo, under foretaket Emmanuel Philis. Hovedkilde er søstermerket til <a href="https://sitera.no">Sitera</a>, som arbeider med samme metode for mindre virksomheter.</p>
+    <p class="reveal">Arbeidet utføres fra Oslo, under foretaket Philis&nbsp;Motorikklab. Hovedkilde er søstermerket til <a href="https://sitera.no">Sitera</a>, som arbeider med samme metode for mindre virksomheter.</p>
+    <!-- LIEN LINKEDIN : décommenter et remplacer LINKEDIN_URL_HER par l'URL réelle quand elle est prête.
+         Pense aussi à ajouter "sameAs": ["<url LinkedIn>"] dans le bloc "founder" du JSON-LD ci-dessus.
+    <p class="founder-link reveal"><a href="LINKEDIN_URL_HER" rel="noopener">Emmanuel Philis på LinkedIn →</a></p>
+    -->
+    <!-- PORTRAIT (optionnel) : pour ajouter une photo N&B plus tard, insérer un <img src="portrett.jpg" alt="Emmanuel Philis"> juste sous le label, et lui donner une largeur ~140px, filtre grayscale, marge basse. -->
   </section>
 
   <section id="sporsmal">
@@ -705,7 +700,7 @@ footer{padding:72px 24px 0}
     <section id="kontakt">
       <div class="label reveal"><span class="num">VI.</span><h2 class="name">Kontakt</h2></div>
       <p class="contact-intro reveal">Be om en innledende samtale. Vi svarer innen to virkedager.</p>
-      <form id="kontaktskjema" class="reveal" action="https://formspree.io/f/xrevndwb" method="POST">
+      <form id="kontaktskjema" class="reveal">
         <div class="field">
           <label for="navn">Navn</label>
           <input type="text" id="navn" name="navn" autocomplete="name" required>
@@ -719,7 +714,7 @@ footer{padding:72px 24px 0}
           <input type="email" id="epost" name="epost" autocomplete="email" required>
         </div>
         <button class="submit" type="submit" id="send">Send forespørsel</button>
-        <p class="contact-alt">Eller skriv direkte til <a href="mailto:post@hovedkilde.no">post@hovedkilde.no</a>.</p>
+        <p class="contact-alt">Eller skriv direkte til <a href="mailto:emmanuel@sitera.no">emmanuel@sitera.no</a>.</p>
         <p class="contact-consent">Ved å sende inn samtykker du til at vi behandler opplysningene i henhold til vår <a href="/personvern.html">personvernerklæring</a>.</p>
       </form>
 
@@ -732,7 +727,7 @@ footer{padding:72px 24px 0}
     <footer>
       <div class="footer-inner">
         <div class="footer-mark">Hovedkilde</div>
-        <div>En del av Emmanuel Philis · Org.nr 937 705 794 · Oslo</div>
+        <div>En del av Philis Motorikklab · Org.nr 937 705 794 · Oslo</div>
         <div>Se også: <a href="https://sitera.no">Sitera</a> · <a href="/personvern.html">Personvern</a></div>
       </div>
       <div class="skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -784,27 +779,19 @@ footer{padding:72px 24px 0}
     });
   }, { passive: true });
 
-  // Contact : sender via Formspree (AJAX), e-post i klartekst som reserve
+  // Contact : validation native + repli mailto
   var skjema = document.getElementById('kontaktskjema');
   if (skjema) {
-    skjema.addEventListener('submit', async function(e){
+    skjema.addEventListener('submit', function(e){
       e.preventDefault();
-      var btn = skjema.querySelector('button[type=submit]');
-      var orig = btn ? btn.textContent : '';
-      if (btn) { btn.disabled = true; btn.textContent = 'Sender …'; }
-      var old = skjema.querySelector('.form-feil'); if (old) old.remove();
-      try {
-        var r = await fetch(skjema.action, { method:'POST', body:new FormData(skjema), headers:{'Accept':'application/json'} });
-        if (!r.ok) throw new Error('bad');
-        skjema.innerHTML = `<p class="contact-intro" style="margin-bottom:0">Takk. Forespørselen din er mottatt. Vi svarer innen to virkedager.</p>`;
-      } catch (err) {
-        if (btn) { btn.disabled = false; btn.textContent = orig; }
-        var p = document.createElement('p');
-        p.className = 'form-feil';
-        p.style.cssText = 'margin-top:16px;color:#f0a99e;font-size:14px';
-        p.textContent = "Noe gikk galt. Prøv igjen, eller skriv til post@hovedkilde.no.";
-        skjema.appendChild(p);
-      }
+      var navn = document.getElementById('navn').value.trim();
+      var selskap = document.getElementById('selskap').value.trim();
+      var epost = document.getElementById('epost').value.trim();
+      var subject = encodeURIComponent('Forespørsel om innledende samtale');
+      var body = encodeURIComponent(
+        'Navn: ' + navn + '\nSelskap: ' + selskap + '\nE-post: ' + epost + '\n\n'
+      );
+      window.location.href = 'mailto:emmanuel@sitera.no?subject=' + subject + '&body=' + body;
     });
   }
 })();
