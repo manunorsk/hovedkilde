@@ -1,3 +1,4 @@
+# robots.txt — hovedkilde.no. AI-motorer er eksplisitt velkomne til å indeksere og sitere innholdet vårt.
 User-agent: GPTBot
 Allow: /
 
@@ -20,6 +21,15 @@ User-agent: PerplexityBot
 Allow: /
 
 User-agent: Google-Extended
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 User-agent: *
