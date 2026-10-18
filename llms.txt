@@ -1,6 +1,8 @@
 # Hovedkilde
 
-> Hovedkilde er et rådgivningsmiljø i Oslo som arbeider med generativ motoroptimalisering (GEO) for større norske virksomheter. Vi måler og dokumenterer hvor ofte en virksomhet siteres i AI-genererte svar — på tvers av ChatGPT, Gemini, Perplexity og Claude.
+> Hovedkilde tilbyr rådgivning i generativ motoroptimalisering (GEO) for større norske virksomheter, fra Oslo. Vi måler og dokumenterer hvor ofte en virksomhet siteres i AI-genererte svar — på tvers av ChatGPT, Gemini, Claude, Perplexity og Copilot.
+
+Sist oppdatert: 18. oktober 2026
 
 ## Om Hovedkilde
 
@@ -10,7 +12,7 @@ Hovedkilde er søstermerket til Sitera (https://sitera.no) og retter seg mot st�
 
 ## Metode
 
-- Kartlegging: måling av siteringsfrekvens på sektorens beslutningsspørsmål, på tvers av fire svarmotorer, med dokumentert og etterprøvbar metode.
+- Kartlegging: måling av siteringsfrekvens på sektorens beslutningsspørsmål, på tvers av fem svarmotorer, med dokumentert og etterprøvbar metode.
 - Posisjonering: strukturering av kildegrunnlaget — referanseinnhold, teknisk merking og dokumentasjon som svarmotorene kan lese, forstå og gjengi.
 - Dokumentasjon: ny måling og rapportering på ledelsesnivå — frekvens, sammenhenger og utvikling over tid, kvartalsvis.
 
@@ -25,7 +27,7 @@ Et engasjement begynner med en kartlegging og videreføres som et tolvmåneders 
 ## Ofte stilte spørsmål
 
 - Hva er generativ motoroptimalisering (GEO)? Arbeidet med å gjøre en virksomhet til en kilde som AI-svarmotorer leser, forstår og siterer. Der søkemotoroptimalisering handler om plassering på en resultatside, handler GEO om å være med i selve svaret.
-- Hvordan måles synlighet? Som hvor ofte virksomheten siteres i svar på et definert sett beslutningsspørsmål, på tvers av fire svarmotorer, gjentatt kvartalsvis.
+- Hvordan måles synlighet? Som hvor ofte virksomheten siteres i svar på et definert sett beslutningsspørsmål, på tvers av fem svarmotorer, gjentatt kvartalsvis.
 - Garanterer Hovedkilde sitering? Nei. Synlighet dokumenteres som en målbar frekvens — den loves aldri.
 - Hva koster et engasjement? Fra 50 000 NOK, som et tolvmåneders program med kvartalsvis dokumentasjon.
 - Hvem er Hovedkilde for? Ledergrupper i større norske virksomheter. Mindre virksomheter betjenes av søstermerket Sitera.
